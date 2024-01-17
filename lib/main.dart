@@ -5,84 +5,117 @@ import 'package:audioplayers/audioplayers.dart';
 void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
+  void playDiffSound(int num){
+    final load = AudioPlayer();
+    load.play(AssetSource('note$num.wav'));
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.black,
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.red
+              Expanded(
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.red,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.zero
+                    )
+                  ),
+                  onPressed: (){
+                    playDiffSound(1);
+                  },
+                  child: Text("Press me!"),
                 ),
-                onPressed: (){
-                  final load = AudioPlayer();
-                  load.play(AssetSource('note1.wav'));
-                },
-                child: Text("Press me!"),
               ),
-              TextButton(
-                style: TextButton.styleFrom(
-                    backgroundColor: Colors.orange
+              Expanded(
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                      backgroundColor: Colors.orange,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.zero
+                      )
+                  ),
+                  onPressed: (){
+                    playDiffSound(2);
+                  },
+                  child: Text("Press me!"),
                 ),
-                onPressed: (){
-                  final load = AudioPlayer();
-                  load.play(AssetSource('note2.wav'));
-                },
-                child: Text("Press me!"),
               ),
-              TextButton(
-                style: TextButton.styleFrom(
-                    backgroundColor: Colors.yellow
+              Expanded(
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                      backgroundColor: Colors.yellow,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.zero
+                      )
+                  ),
+                  onPressed: (){
+                    playDiffSound(3);
+                  },
+                  child: Text("Press me!"),
                 ),
-                onPressed: (){
-                  final load = AudioPlayer();
-                  load.play(AssetSource('note3.wav'));
-                },
-                child: Text("Press me!"),
               ),
-              TextButton(
-                style: TextButton.styleFrom(
-                    backgroundColor: Colors.green
+              Expanded(
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                      backgroundColor: Colors.green,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.zero
+                      )
+                  ),
+                  onPressed: (){
+                    playDiffSound(4);
+                  },
+                  child: Text("Press me!"),
                 ),
-                onPressed: (){
-                  final load = AudioPlayer();
-                  load.play(AssetSource('note4.wav'));
-                },
-                child: Text("Press me!"),
               ),
-              TextButton(
-                style: TextButton.styleFrom(
-                    backgroundColor: Colors.blue
+              Expanded(
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.zero
+                      )
+                  ),
+                  onPressed: (){
+                    playDiffSound(5);
+                  },
+                  child: Text("Press me!"),
                 ),
-                onPressed: (){
-                  final load = AudioPlayer();
-                  load.play(AssetSource('note5.wav'));
-                },
-                child: Text("Press me!"),
               ),
-              TextButton(
-                style: TextButton.styleFrom(
-                    backgroundColor: Colors.indigo
+              Expanded(
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                      backgroundColor: Colors.indigo,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.zero
+                      )
+                  ),
+                  onPressed: (){
+                    playDiffSound(6);
+                  },
+                  child: Text("Press me!"),
                 ),
-                onPressed: (){
-                  final load = AudioPlayer();
-                  load.play(AssetSource('note6.wav'));
-                },
-                child: Text("Press me!"),
               ),
-              TextButton(
-                style: TextButton.styleFrom(
-                    backgroundColor: Colors.purple
+              Expanded(
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                      backgroundColor: Colors.purple,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.zero
+                      )
+                  ),
+                  onPressed: (){
+                    playDiffSound(7);
+                  },
+                  child: Text("Press me!"),
                 ),
-                onPressed: (){
-                  final load = AudioPlayer();
-                  load.play(AssetSource('note7.wav'));
-                },
-                child: Text("Press me!"),
               ),
             ],
           ),
